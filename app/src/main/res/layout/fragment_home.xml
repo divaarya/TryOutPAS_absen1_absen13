@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- res/layout/fragment_home.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:gravity="center">
+
 
     <TextView
-        android:text="Home Fragment"
-        android:textSize="24sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="League"
+        android:layout_gravity="center"
+        android:textSize="128px"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnPremier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="premiere"
+            android:textSize="64px"
+            />
+
+        <Button
+            android:id="@+id/btnLaLiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="la liga"
+            android:layout_marginLeft="30dp"
+            android:textSize="64px"
+            />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
 </LinearLayout>
